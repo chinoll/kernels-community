@@ -1,0 +1,35 @@
+[general]
+name = "rwkv7"
+version = 1
+license = "Apache-2.0"
+backends = ["cuda"]
+
+[general.hub]
+repo-id = "kernels-community/rwkv7"
+
+[torch]
+src = ["torch-ext/torch_binding.cpp"]
+
+[kernel.rwkv7]
+backend = "cuda"
+cuda-capabilities = [
+    "8.0",
+    "8.9",
+    "9.0",
+    "10.0",
+    "12.0",
+]
+cuda-flags = [
+    "-res-usage",
+    "--use_fast_math",
+    "-O3",
+    "--extra-device-vectorization",
+    "-D_N_=64",
+    "-D_CHUNK_LEN_=16",
+]
+depends = ["torch"]
+include = ["."]
+src = [
+    "rwkv7/rwkv7_sequence.cu",
+    "rwkv7/rwkv7_state_passing.cu",
+]
