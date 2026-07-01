@@ -1,5 +1,5 @@
 // SPDX-FileCopyrightText: Copyright (c) Bo Peng (BlinkDL)
-// SPDX-FileCopyrightText: Copyright (c) 2026 Hugging Face Inc. and contributors
+// SPDX-FileCopyrightText: Copyright (c) 2026 Hugging Face Inc. and chinoll
 // SPDX-License-Identifier: Apache-2.0
 //
 // Ported from BlinkDL/RWKV-CUDA rwkv7_fast_fused/cuda/rwkv7_clampw.cu:
